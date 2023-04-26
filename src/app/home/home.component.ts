@@ -46,7 +46,7 @@ export class HomeComponent{
   }
 
   copyText() {
-    const textToCopy = '+91 7760847075'; // Replace with your text
+    const textToCopy = '+91 7760847075'; 
     const clipboard = navigator.clipboard;
     clipboard.writeText(textToCopy).then(() => {
       alert('Text copied to clipboard');
