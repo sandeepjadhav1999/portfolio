@@ -149,31 +149,37 @@
     <section class="introduction space">
         <div>
             <h1 class="title">Achievement & Certification.</h1>
-            <div fxLayout="row wrap" fxLayoutGap="10px grid">
-                <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%" fxFlex.md="100%" fxFlex.md="33%" *ngFor="let certificate of certificate">
-                    <mat-card class="hovercard">
+            <div class="content">
+                <div fxLayout="row wrap" fxLayoutGap="16px grid">
+                  <div
+                    fxFlex="50%"
+                    fxFlex.xs="100%"
+                    fxFlex.sm="100%"
+                    *ngFor="let certificate of certificate"
+                  >
+                    <mat-card class="mat-elevation-z4">
                         <mat-card-content
-                            style="display: flex; align-items: center; gap: 30px; justify-content: start;">
-                            <div><img src="{{certificate.org_logo}}" alt=""></div>
-                            <div>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="title-exp">Organization : </div>
-                                    <div class="subtitle"> {{certificate.org}}</div>
-                                </div>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="title-exp" style="width: 105px;">Name : </div>
-                                    <div class="subtitle" style="word-break: break-word;"> {{certificate.name}}</div>
-                                </div>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="title-exp">Credential ID : </div>
-                                    <div class="subtitle"> {{certificate.credential_id}}</div>
-                                </div>
+                        style="display: flex; align-items: center; gap: 30px; justify-content: start;">
+                        <div><img src="{{certificate.org_logo}}" alt=""></div>
+                        <div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="title-exp">Organization : </div>
+                                <div class="subtitle"> {{certificate.org}}</div>
                             </div>
-                        </mat-card-content>
-
+                            <div style="display: flex; align-items: center;">
+                                <div class="title-exp" style="width: 105px;">Name : </div>
+                                <div class="subtitle" style="word-break: break-word;"> {{certificate.name}}</div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="title-exp">Credential ID : </div>
+                                <div class="subtitle"> {{certificate.credential_id}}</div>
+                            </div>
+                        </div>
+                    </mat-card-content>
                     </mat-card>
+                  </div>
                 </div>
-            </div>
+              </div>
         </div>
     </section>
     <footer class="introduction space">
